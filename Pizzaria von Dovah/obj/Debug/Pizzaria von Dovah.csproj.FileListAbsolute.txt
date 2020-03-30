@@ -1,0 +1,18 @@
+C:\Users\Cliff\source\repos\Pizzaria von Dovah\Pizzaria von Dovah\bin\Debug\Pizzaria von Dovah.exe.config
+C:\Users\Cliff\source\repos\Pizzaria von Dovah\Pizzaria von Dovah\bin\Debug\Pizzaria von Dovah.exe
+C:\Users\Cliff\source\repos\Pizzaria von Dovah\Pizzaria von Dovah\bin\Debug\Pizzaria von Dovah.pdb
+C:\Users\Cliff\source\repos\Pizzaria von Dovah\Pizzaria von Dovah\obj\Debug\Pizzaria von Dovah.csprojAssemblyReference.cache
+C:\Users\Cliff\source\repos\Pizzaria von Dovah\Pizzaria von Dovah\obj\Debug\MainWindow.g.cs
+C:\Users\Cliff\source\repos\Pizzaria von Dovah\Pizzaria von Dovah\obj\Debug\App.g.cs
+C:\Users\Cliff\source\repos\Pizzaria von Dovah\Pizzaria von Dovah\obj\Debug\Pizzaria von Dovah_MarkupCompile.cache
+C:\Users\Cliff\source\repos\Pizzaria von Dovah\Pizzaria von Dovah\obj\Debug\Pizzaria von Dovah_MarkupCompile.lref
+C:\Users\Cliff\source\repos\Pizzaria von Dovah\Pizzaria von Dovah\obj\Debug\MainWindow.baml
+C:\Users\Cliff\source\repos\Pizzaria von Dovah\Pizzaria von Dovah\obj\Debug\Pizzaria von Dovah.g.resources
+C:\Users\Cliff\source\repos\Pizzaria von Dovah\Pizzaria von Dovah\obj\Debug\Pizzaria_von_Dovah.Properties.Resources.resources
+C:\Users\Cliff\source\repos\Pizzaria von Dovah\Pizzaria von Dovah\obj\Debug\Pizzaria von Dovah.csproj.GenerateResource.cache
+C:\Users\Cliff\source\repos\Pizzaria von Dovah\Pizzaria von Dovah\obj\Debug\Pizzaria von Dovah.exe
+C:\Users\Cliff\source\repos\Pizzaria von Dovah\Pizzaria von Dovah\obj\Debug\Pizzaria von Dovah.pdb
+C:\Users\Cliff\source\repos\Pizzaria von Dovah\Pizzaria von Dovah\obj\Debug\Main_Menu.g.cs
+C:\Users\Cliff\source\repos\Pizzaria von Dovah\Pizzaria von Dovah\obj\Debug\Main_Menu.baml
+C:\Users\Cliff\source\repos\Pizzaria von Dovah\Pizzaria von Dovah\obj\Debug\Menu.g.cs
+C:\Users\Cliff\source\repos\Pizzaria von Dovah\Pizzaria von Dovah\obj\Debug\Menu.baml
