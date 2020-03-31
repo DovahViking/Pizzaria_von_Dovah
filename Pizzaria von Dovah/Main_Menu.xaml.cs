@@ -34,5 +34,15 @@ namespace Pizzaria_von_Dovah
         {
             main_menu_frame.Content = new Menu();
         }
+
+        private void main_menu_do_it_yourself_Click(object sender, RoutedEventArgs e)
+        {
+            main_menu_frame.Content = new Do_it_yourself();
+        }
+
+        private void main_menu_cart_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

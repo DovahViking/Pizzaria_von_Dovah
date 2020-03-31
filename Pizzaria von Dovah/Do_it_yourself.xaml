@@ -1,0 +1,104 @@
+﻿<Page x:Class="Pizzaria_von_Dovah.Do_it_yourself"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Pizzaria_von_Dovah"
+      mc:Ignorable="d" 
+      d:DesignHeight="492" d:DesignWidth="474"
+      Title="Do_it_yourself">
+
+    <Grid>
+        <StackPanel>
+            <TextBlock Text="Do it yourself" FontSize="30" HorizontalAlignment="Center"/>
+            <TextBlock Text="Size" FontSize="15" HorizontalAlignment="Center" Margin="0, 15, 0, 0"/>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" VerticalAlignment="Top" Margin="0, 80, 0, 0" HorizontalAlignment="Center">
+            <Button x:Name="diy_medium_pizza_button" Content="Medium" Margin="0, 0, 20, 0" Click="diy_medium_pizza_button_Click" Width="50"/>
+            <Button x:Name="diy_family_pizza_button" Content="Family" Click="diy_family_pizza_button_Click" Width="50"/>
+        </StackPanel>
+        <TextBlock Text="Dough" FontSize="15" HorizontalAlignment="Center" Margin="0, 130, 0, 0"/>
+        <StackPanel Orientation="Horizontal" VerticalAlignment="Top" Margin="0, 80, 0, 0" HorizontalAlignment="Center">
+            <RadioButton x:Name="diy_Italian_Tipo_00_rad_button" Margin="0, 85, 0, 0"/>
+            <RadioButton x:Name="diy_normie_pizza_dough_button" Margin="100, 85, 0, 0"/>
+        </StackPanel>
+        <TextBlock Text="Italian Tipo 00" Margin="-115, 185, 0, 0" HorizontalAlignment="Center"/>
+        <TextBlock Text="Normie pizza dough" Margin="115, 185, 0, 0" HorizontalAlignment="Center"/>
+        <TextBlock Text="Sauce" FontSize="15" HorizontalAlignment="Center" Margin="0, 220, 0, 0"/>
+        <StackPanel Orientation="Horizontal" VerticalAlignment="Top" Margin="0, 170, 0, 0" HorizontalAlignment="Center">
+            <RadioButton x:Name="diy_tomato_sauce_rad_button" Margin="0, 85, 0, 0"/>
+            <RadioButton x:Name="diy_sweet_sour_sauce_button" Margin="100, 85, 0, 0"/>
+        </StackPanel>
+        <TextBlock Text="Tomato sauce" Margin="-115, 275, 0, 0" HorizontalAlignment="Center"/>
+        <TextBlock Text="Sweet / Sour" Margin="115, 275, 0, 0" HorizontalAlignment="Center"/>
+        <TextBlock Text="Topping" FontSize="15" HorizontalAlignment="Center" Margin="0, 310, 0, 0"/>
+        <StackPanel x:Name="diy_topping" Orientation="Horizontal" VerticalAlignment="Top" Margin="0, 350, 0, 0" HorizontalAlignment="Center">
+            <ComboBox HorizontalAlignment="Center" Margin="0, 0, 0, 0" Width="70">
+                <ComboBoxItem>Ham</ComboBoxItem>
+                <ComboBoxItem>Fries</ComboBoxItem>
+                <ComboBoxItem>Champingon</ComboBoxItem>
+                <ComboBoxItem>Pepperoni</ComboBoxItem>
+                <ComboBoxItem>Chicken</ComboBoxItem>
+                <ComboBoxItem>Kebab</ComboBoxItem>
+                <ComboBoxItem>Spaghetti</ComboBoxItem>
+                <ComboBoxItem>Cocktail sausage</ComboBoxItem>
+                <ComboBoxItem>Extra cheese</ComboBoxItem>
+            </ComboBox>
+            <ComboBox HorizontalAlignment="Center" Margin="40, 0, 0, 0" Width="70">
+                <ComboBoxItem>Ham</ComboBoxItem>
+                <ComboBoxItem>Fries</ComboBoxItem>
+                <ComboBoxItem>Champingon</ComboBoxItem>
+                <ComboBoxItem>Pepperoni</ComboBoxItem>
+                <ComboBoxItem>Chicken</ComboBoxItem>
+                <ComboBoxItem>Kebab</ComboBoxItem>
+                <ComboBoxItem>Spaghetti</ComboBoxItem>
+                <ComboBoxItem>Cocktail sausage</ComboBoxItem>
+                <ComboBoxItem>Extra cheese</ComboBoxItem>
+            </ComboBox>
+            <ComboBox HorizontalAlignment="Center" Margin="40, 0, 0, 0" Width="70">
+                <ComboBoxItem>Ham</ComboBoxItem>
+                <ComboBoxItem>Fries</ComboBoxItem>
+                <ComboBoxItem>Champingon</ComboBoxItem>
+                <ComboBoxItem>Pepperoni</ComboBoxItem>
+                <ComboBoxItem>Chicken</ComboBoxItem>
+                <ComboBoxItem>Kebab</ComboBoxItem>
+                <ComboBoxItem>Spaghetti</ComboBoxItem>
+                <ComboBoxItem>Cocktail sausage</ComboBoxItem>
+                <ComboBoxItem>Extra cheese</ComboBoxItem>
+            </ComboBox>
+            <ComboBox HorizontalAlignment="Center" Margin="40, 0, 0, 0" Width="70">
+                <ComboBoxItem>Ham</ComboBoxItem>
+                <ComboBoxItem>Fries</ComboBoxItem>
+                <ComboBoxItem>Champingon</ComboBoxItem>
+                <ComboBoxItem>Pepperoni</ComboBoxItem>
+                <ComboBoxItem>Chicken</ComboBoxItem>
+                <ComboBoxItem>Kebab</ComboBoxItem>
+                <ComboBoxItem>Spaghetti</ComboBoxItem>
+                <ComboBoxItem>Cocktail sausage</ComboBoxItem>
+                <ComboBoxItem>Extra cheese</ComboBoxItem>
+            </ComboBox>
+        </StackPanel>
+        <TextBlock Text="Cheese" HorizontalAlignment="Center" FontSize="15" Margin="-150, 400, 0, 0"/>
+        <TextBlock Text="Spice" HorizontalAlignment="Center" FontSize="15" Margin="150, 400, 0, 0"/>
+        <StackPanel x:Name="diy_cheese" Orientation="Horizontal" VerticalAlignment="Top" Margin="-150, 430, 0, 0" HorizontalAlignment="Center">
+            <ComboBox HorizontalAlignment="Center" Margin="0, 0, 0, 0" Width="70">
+                <ComboBoxItem>Cow cheese</ComboBoxItem>
+                <ComboBoxItem>Goat cheese</ComboBoxItem>
+                <ComboBoxItem>Horse cheese</ComboBoxItem>
+                <ComboBoxItem>Pig cheese</ComboBoxItem>
+            </ComboBox>
+        </StackPanel>
+        <StackPanel x:Name="diy_spice" Orientation="Horizontal" VerticalAlignment="Top" Margin="150, 430, 0, 0" HorizontalAlignment="Center">
+            <ComboBox HorizontalAlignment="Center" Margin="0, 0, 0, 0" Width="70">
+                <ComboBoxItem>Pepper</ComboBoxItem>
+                <ComboBoxItem>Salt</ComboBoxItem>
+                <ComboBoxItem>Extra Pepperoni</ComboBoxItem>
+                <ComboBoxItem>Chili</ComboBoxItem>
+                <ComboBoxItem>Extra hot chili</ComboBoxItem>
+                <ComboBoxItem>Extra extra hot chili</ComboBoxItem>
+            </ComboBox>
+        </StackPanel>
+        <Button x:Name="diy_next_button" Content="Next" Width="60" Height="20" HorizontalAlignment="Center" Margin="350, 420, 0, 0"/>
+        <Button x:Name="diy_reset_button" Content="Reset" Width="60" Height="20" HorizontalAlignment="Center" Margin="-350, 420, 0, 0" Click="diy_reset_button_Click"/>
+    </Grid>
+</Page>
