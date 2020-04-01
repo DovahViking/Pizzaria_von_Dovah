@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -20,6 +21,8 @@ namespace Pizzaria_von_Dovah
     /// </summary>
     public partial class Menu : Page
     {
+        public ObservableCollection<Pizza_name> pizza_orders = new ObservableCollection<Pizza_name>();
+
         public Menu()
         {
             //Pizza pizza1 = new Pizza("pizzaaaaaaaa", "qqqq", "32");
@@ -35,6 +38,7 @@ namespace Pizzaria_von_Dovah
 
         private void menu_family_pizza_button_Click(object sender, RoutedEventArgs e)
         {
+
             if (pizza_price1.Text != "7.00")
             {
                 menu_family_pizza_button.IsEnabled = false;
@@ -53,7 +57,28 @@ namespace Pizzaria_von_Dovah
 
         private void add_to_cart_button_Click(object sender, RoutedEventArgs e)
         {
+            if (sender.Equals(pizza_order1)) // tried with switch/case but got type exception
+            {
+                pizza_orders.Add(new Pizza_name(pizza_name1.Text));
+            }
+            if (sender.Equals(pizza_order2))
+            {
+                pizza_orders.Add(new Pizza_name(pizza_name2.Text));
+            }
+            if (sender.Equals(pizza_order3))
+            {
+                pizza_orders.Add(new Pizza_name(pizza_name3.Text));
+            }
+        }
+    }
 
+    public class Pizza_name
+    {
+        public string pizza_name;
+
+        public Pizza_name(string pizza_name)
+        {
+            this.pizza_name = pizza_name;
         }
     }
 

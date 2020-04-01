@@ -1,0 +1,19 @@
+﻿<Page x:Class="Pizzaria_von_Dovah.Cart"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Pizzaria_von_Dovah"
+      mc:Ignorable="d" 
+      d:DesignHeight="492" d:DesignWidth="474"
+      Title="Cart">
+
+    <Grid>
+        <TextBlock Text="Cart" FontSize="30" HorizontalAlignment="Center"/>
+        <DataGrid Margin="50, 70, 50, 50" ItemsSource="{Binding pizza_orders}">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Pizza" Binding="{Binding Path=pizza_orders}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Page>

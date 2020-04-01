@@ -18,3 +18,5 @@ C:\Users\Cliff\source\repos\Pizzaria von Dovah\Pizzaria von Dovah\obj\Debug\Menu
 C:\Users\Cliff\source\repos\Pizzaria von Dovah\Pizzaria von Dovah\obj\Debug\Menu.baml
 C:\Users\Cliff\source\repos\Pizzaria von Dovah\Pizzaria von Dovah\obj\Debug\Do_it_yourself.g.cs
 C:\Users\Cliff\source\repos\Pizzaria von Dovah\Pizzaria von Dovah\obj\Debug\Do_it_yourself.baml
+C:\Users\Cliff\source\repos\Pizzaria von Dovah\Pizzaria von Dovah\obj\Debug\Cart.g.cs
+C:\Users\Cliff\source\repos\Pizzaria von Dovah\Pizzaria von Dovah\obj\Debug\Cart.baml

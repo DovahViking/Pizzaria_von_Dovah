@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Pizzaria_von_Dovah"
         mc:Ignorable="d"
-        Title="Main_Menu" Height="675" Width="500"
+        Title="Main Menu" Height="675" Width="500"
         WindowStartupLocation="CenterScreen">
     <Grid>
         <TextBlock x:Name="main_menu_header" Text="Pizzaria von Dovah" FontSize="45" FontWeight="Heavy" HorizontalAlignment="Center" Margin="0, 10, 0, 0"/>
