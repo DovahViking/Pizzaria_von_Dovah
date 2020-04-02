@@ -6,7 +6,9 @@
         xmlns:local="clr-namespace:Pizzaria_von_Dovah"
         mc:Ignorable="d"
         Title="Pizzaria von Dovah" Height="450" Width="800"
-        WindowStartupLocation="CenterScreen">
+        WindowStartupLocation="CenterScreen"
+        ResizeMode="NoResize"
+        >
     <Grid>
 
         <TextBlock x:Name="main_header" Text="Pizzaria von Dovah" FontWeight="Heavy" FontSize="50" Margin="157,10,158,343"/>

@@ -10,9 +10,10 @@
 
     <Grid>
         <TextBlock Text="Cart" FontSize="30" HorizontalAlignment="Center"/>
+        
         <DataGrid Margin="50, 70, 50, 50" ItemsSource="{Binding pizza_orders}">
             <DataGrid.Columns>
-                <DataGridTextColumn Header="Pizza" Binding="{Binding Path=pizza_orders}"/>
+                <DataGridTextColumn Header="Pizza" Binding="{Binding}"/>
             </DataGrid.Columns>
         </DataGrid>
     </Grid>

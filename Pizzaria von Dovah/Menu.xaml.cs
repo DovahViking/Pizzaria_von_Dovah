@@ -21,12 +21,13 @@ namespace Pizzaria_von_Dovah
     /// </summary>
     public partial class Menu : Page
     {
-        public ObservableCollection<Pizza_name> pizza_orders = new ObservableCollection<Pizza_name>();
+        public ObservableCollection<Pizza_Order> pizza_orders = new ObservableCollection<Pizza_Order>();
 
         public Menu()
         {
             //Pizza pizza1 = new Pizza("pizzaaaaaaaa", "qqqq", "32");
             InitializeComponent();
+            this.DataContext = this;
         }
 
         private void menu_medium_pizza_button_Click(object sender, RoutedEventArgs e)
@@ -59,26 +60,66 @@ namespace Pizzaria_von_Dovah
         {
             if (sender.Equals(pizza_order1)) // tried with switch/case but got type exception
             {
-                pizza_orders.Add(new Pizza_name(pizza_name1.Text));
+                pizza_orders.Add(new Pizza_Order(pizza_name1.Text, pizza_price1.Text));
             }
             if (sender.Equals(pizza_order2))
             {
-                pizza_orders.Add(new Pizza_name(pizza_name2.Text));
+                pizza_orders.Add(new Pizza_Order(pizza_name2.Text, pizza_price2.Text));
             }
             if (sender.Equals(pizza_order3))
             {
-                pizza_orders.Add(new Pizza_name(pizza_name3.Text));
+                pizza_orders.Add(new Pizza_Order(pizza_name3.Text, pizza_price3.Text));
             }
+        }
+
+        private void drink_size_s_Checked(object sender, RoutedEventArgs e)
+        {
+            string drink_s_price = "2.00";
+
+            drink_price1.Text = drink_s_price;
+            drink_price2.Text = drink_s_price;
+            drink_price3.Text = drink_s_price;
+        }
+
+        private void drink_size_m_Checked(object sender, RoutedEventArgs e)
+        {
+            string drink_m_price = "3.30";
+
+            drink_price1.Text = drink_m_price;
+            drink_price2.Text = drink_m_price;
+            drink_price3.Text = drink_m_price;
+        }
+
+        private void drink_size_l_Checked(object sender, RoutedEventArgs e)
+        {
+            string drink_l_price = "4.00";
+
+            drink_price1.Text = drink_l_price;
+            drink_price2.Text = drink_l_price;
+            drink_price3.Text = drink_l_price;
         }
     }
 
-    public class Pizza_name
+    public class Pizza_Order
     {
         public string pizza_name;
+        public string pizza_price;
 
-        public Pizza_name(string pizza_name)
+        public Pizza_Order(string pizza_name, string pizza_price)
         {
             this.pizza_name = pizza_name;
+            this.pizza_price = pizza_price;
+        }
+
+        public string pizz_name
+        {
+            get { return pizza_name; }
+            set { pizza_name = value; }
+        }
+        public string pizz_price
+        {
+            get { return pizza_price; }
+            set { pizza_price = value; }
         }
     }
 

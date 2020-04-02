@@ -19,6 +19,7 @@ namespace Pizzaria_von_Dovah
     /// </summary>
     public partial class Main_Menu : Window
     {
+        bool cart = false;
         public Main_Menu()
         {
             InitializeComponent();
@@ -42,9 +43,6 @@ namespace Pizzaria_von_Dovah
 
         private void main_menu_cart_Click(object sender, RoutedEventArgs e)
         {
-            Menu M;
-
-            bool cart = false;
             if (cart == false)
             {
                 main_menu_frame.Content = new Cart();
@@ -52,7 +50,7 @@ namespace Pizzaria_von_Dovah
             }
             else
             {
-                main_menu_frame.Content = main_menu_cart;
+                main_menu_frame.Content = main_menu_cart; // returns error
             }
         }
     }

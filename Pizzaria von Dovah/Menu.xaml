@@ -9,8 +9,8 @@
       Title="Menu">
 
     <Grid>
-        <TextBlock Text="Pizza" FontSize="30" HorizontalAlignment="Center"/>
-        <TextBlock Text="Size" FontSize="15" HorizontalAlignment="Center" Margin="0, 45, 0, 0"/>
+        <TextBlock Text="Pizzas and drinks" FontSize="30" HorizontalAlignment="Center"/>
+        <TextBlock Text="Pizza size" FontSize="15" HorizontalAlignment="Center" Margin="0, 45, 0, 0"/>
 
         <StackPanel Orientation="Horizontal" VerticalAlignment="Top" Margin="0, 70, 0, 0" HorizontalAlignment="Center">
             <Button x:Name="menu_medium_pizza_button" Content="Medium" Margin="0, 0, 30, 0" Click="menu_medium_pizza_button_Click" Width="50"/>
@@ -18,28 +18,58 @@
         </StackPanel>
 
         <Frame Margin="0, 90, 0, 0"/>
-        <StackPanel VerticalAlignment="Top" Margin="25, 120, 0, 0">
-            <TextBlock x:Name="pizza_name1" Text="Alfredo" FontSize="20"/>
-            <Button x:Name="pizza_order1" Content="Add to cart" Width="70" Margin="452,-20,253,0" Click="add_to_cart_button_Click"/>
-            <TextBlock x:Name="pizza_ingredients1" Text="Tomato, cheese, ham, sausages, pepperoni"/>
-            <TextBlock Text="$" Margin="380, -35, 0, 0" Foreground="DarkSeaGreen"/>
-            <TextBlock x:Name="pizza_price1" Text="7.00" Margin="390, -35, 0, 0" Foreground="DarkSeaGreen"/>
-            <Rectangle Width="420" Height="2" Fill="Black" Margin="-38, 8, 0, 0"/>
+        <ScrollViewer VerticalScrollBarVisibility="Auto" Margin="0, 100, 0, 0">
+            <StackPanel VerticalAlignment="Top" Margin="25, 120, 0, 0">
+                
+                <TextBlock x:Name="pizza_name1" Text="Alfredo" FontSize="20"/>
+                <Button x:Name="pizza_order1" Content="Add to cart" Width="70" Margin="452,-20,253,0" Click="add_to_cart_button_Click"/>
+                <TextBlock x:Name="pizza_ingredients1" Text="Tomato, cheese, ham, sausages, pepperoni"/>
+                <TextBlock Text="$" Margin="380, -35, 0, 0" Foreground="DarkSeaGreen"/>
+                <TextBlock x:Name="pizza_price1" Text="7.00" Margin="390, -35, 0, 0" Foreground="DarkSeaGreen"/>
+                <Rectangle Width="420" Height="2" Fill="Black" Margin="-38, 8, 0, 0"/>
 
-            <TextBlock x:Name="pizza_name2" Text="The fatty" FontSize="20" Margin="0, 30, 0, 0"/>
-            <Button x:Name="pizza_order2" Content="Add to cart" Width="70" Margin="200, -20, 0, 0" Click="add_to_cart_button_Click"/>
-            <TextBlock x:Name="pizza_ingredients2" Text="Steak, onion, mushroom, pepper, pizza sauce and pizza cheese"/>
-            <TextBlock Text="$" Margin="380, -35, 0, 0" Foreground="DarkSeaGreen"/>
-            <TextBlock x:Name="pizza_price2" Text="13.00" Margin="390, -35, 0, 0" Foreground="DarkSeaGreen"/>
-            <Rectangle Width="420" Height="2" Fill="Black" Margin="-38, 8, 0, 0"/>
+                <TextBlock x:Name="pizza_name2" Text="The fatty" FontSize="20" Margin="0, 30, 0, 0"/>
+                <Button x:Name="pizza_order2" Content="Add to cart" Width="70" Margin="200, -20, 0, 0" Click="add_to_cart_button_Click"/>
+                <TextBlock x:Name="pizza_ingredients2" Text="Steak, onion, mushroom, pepper, pizza sauce and pizza cheese"/>
+                <TextBlock Text="$" Margin="380, -35, 0, 0" Foreground="DarkSeaGreen"/>
+                <TextBlock x:Name="pizza_price2" Text="13.00" Margin="390, -35, 0, 0" Foreground="DarkSeaGreen"/>
+                <Rectangle Width="420" Height="2" Fill="Black" Margin="-38, 8, 0, 0"/>
 
-            <TextBlock x:Name="pizza_name3" Text="Baby devourer" FontSize="20" Margin="0, 30, 0, 0"/>
-            <Button x:Name="pizza_order3" Content="Add to cart" Width="70" Margin="200, -20, 0, 0" Click="add_to_cart_button_Click"/>
-            <TextBlock x:Name="pizza_ingredients3" Text="Lean Canadian bacon, salami, pepperoni, ham, signature sausage, and real bacon"/>
-            <TextBlock Text="$" Margin="380, -35, 0, 0" Foreground="DarkSeaGreen"/>
-            <TextBlock x:Name="pizza_price3" Text="15.00" Margin="390, -35, 0, 0" Foreground="DarkSeaGreen"/>
-            <Rectangle Width="420" Height="2" Fill="Black" Margin="-38, 8, 0, 0"/>
-        </StackPanel>
-        
+                <TextBlock x:Name="pizza_name3" Text="Baby devourer" FontSize="20" Margin="0, 30, 0, 0"/>
+                <Button x:Name="pizza_order3" Content="Add to cart" Width="70" Margin="200, -20, 0, 0" Click="add_to_cart_button_Click"/>
+                <TextBlock x:Name="pizza_ingredients3" Text="Lean Canadian bacon, salami, pepperoni, ham, signature sausage, and real bacon"/>
+                <TextBlock Text="$" Margin="380, -35, 0, 0" Foreground="DarkSeaGreen"/>
+                <TextBlock x:Name="pizza_price3" Text="15.00" Margin="390, -35, 0, 0" Foreground="DarkSeaGreen"/>
+                <Rectangle Width="420" Height="2" Fill="Black" Margin="-38, 8, 0, 0"/>
+
+                <TextBlock x:Name="drink_name1" Text="Coca Cola" FontSize="20" Margin="0, 30, 0, 0"/>
+                <RadioButton x:Name="drink1_size_s" Content="Small" Margin="130, -50, 0, 0" Checked="drink_size_s_Checked"/>
+                <RadioButton x:Name="drink1_size_m" Content="Medium" Margin="130, -30, 0, 0" Checked="drink_size_m_Checked"/>
+                <RadioButton x:Name="drink1_size_l" Content="Large" Margin="130, -10, 0, 0" Checked="drink_size_l_Checked"/>
+                <Button x:Name="drink_order1" Content="Add to cart" Width="70" Margin="200, -20, 0, 0" Click="add_to_cart_button_Click"/>
+                <TextBlock Text="$" Margin="380, -35, 0, 0" Foreground="DarkSeaGreen"/>
+                <TextBlock x:Name="drink_price1" Text="2.00" Margin="390, -35, 0, 0" Foreground="DarkSeaGreen"/>
+                <Rectangle Width="420" Height="2" Fill="Black" Margin="-38, 8, 0, 0"/>
+
+                <TextBlock x:Name="drink_name2" Text="Sprite" FontSize="20" Margin="0, 30, 0, 0"/>
+                <RadioButton x:Name="drink2_size_s" Content="Small" Margin="130, -50, 0, 0" Checked="drink_size_s_Checked"/>
+                <RadioButton x:Name="drink2_size_m" Content="Medium" Margin="130, -30, 0, 0" Checked="drink_size_m_Checked"/>
+                <RadioButton x:Name="drink2_size_l" Content="Large" Margin="130, -10, 0, 0" Checked="drink_size_l_Checked"/>
+                <Button x:Name="drink_order2" Content="Add to cart" Width="70" Margin="200, -20, 0, 0" Click="add_to_cart_button_Click"/>
+                <TextBlock Text="$" Margin="380, -35, 0, 0" Foreground="DarkSeaGreen"/>
+                <TextBlock x:Name="drink_price2" Text="2.00" Margin="390, -35, 0, 0" Foreground="DarkSeaGreen"/>
+                <Rectangle Width="420" Height="2" Fill="Black" Margin="-38, 8, 0, 0"/>
+
+                <TextBlock x:Name="drink_name3" Text="Fanta" FontSize="20" Margin="0, 30, 0, 0"/>
+                <RadioButton x:Name="drink3_size_s" Content="Small" Margin="130, -50, 0, 0" Checked="drink_size_s_Checked"/>
+                <RadioButton x:Name="drink3_size_m" Content="Medium" Margin="130, -30, 0, 0" Checked="drink_size_m_Checked"/>
+                <RadioButton x:Name="drink3_size_l" Content="Large" Margin="130, -10, 0, 0" Checked="drink_size_l_Checked"/>
+                <Button x:Name="drink_order3" Content="Add to cart" Width="70" Margin="200, -20, 0, 0" Click="add_to_cart_button_Click"/>
+                <TextBlock Text="$" Margin="380, -35, 0, 0" Foreground="DarkSeaGreen"/>
+                <TextBlock x:Name="drink_price3" Text="2.00" Margin="390, -35, 0, 0" Foreground="DarkSeaGreen"/>
+                <Rectangle Width="420" Height="2" Fill="Black" Margin="-38, 8, 0, 0"/>
+
+            </StackPanel>
+        </ScrollViewer>
     </Grid>
 </Page>
