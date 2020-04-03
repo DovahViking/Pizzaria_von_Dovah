@@ -10,6 +10,7 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace Pizzaria_von_Dovah
@@ -50,7 +51,13 @@ namespace Pizzaria_von_Dovah
             }
             else
             {
-                main_menu_frame.Content = main_menu_cart; // returns error
+                // main_menu_cart = null; // gets rid of the exception but removes the fucking Cart xd
+                // main_menu_frame.Navigate(main_menu_cart); // returns exception
+
+                // NavigationService nav = NavigationService.GetNavigationService(this);
+                // nav.Navigate(new Uri("Cart.xaml", UriKind.RelativeOrAbsolute));
+
+                // User Controls?
             }
         }
     }
