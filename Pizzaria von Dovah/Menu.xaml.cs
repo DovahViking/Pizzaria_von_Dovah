@@ -27,7 +27,7 @@ namespace Pizzaria_von_Dovah
         {
             //Pizza pizza1 = new Pizza("pizzaaaaaaaa", "qqqq", "32");
             InitializeComponent();
-            this.DataContext = this;
+            DataContext = this.pizza_orders;
         }
 
         private void menu_medium_pizza_button_Click(object sender, RoutedEventArgs e)

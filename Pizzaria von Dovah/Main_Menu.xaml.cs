@@ -21,6 +21,8 @@ namespace Pizzaria_von_Dovah
     public partial class Main_Menu : Window
     {
         bool cart = false;
+        Cart shopping_cart = new Cart();
+
         public Main_Menu()
         {
             InitializeComponent();
@@ -44,13 +46,14 @@ namespace Pizzaria_von_Dovah
 
         private void main_menu_cart_Click(object sender, RoutedEventArgs e)
         {
-            if (cart == false)
+            if (cart == false) // Only used for when I made a new shopping_cart when you clicked the "Cart" button
             {
-                main_menu_frame.Content = new Cart();
+                main_menu_frame.Content = shopping_cart;
                 cart = true;
             }
             else
             {
+                main_menu_frame.Content = shopping_cart;
                 // main_menu_cart = null; // gets rid of the exception but removes the fucking Cart xd
                 // main_menu_frame.Navigate(main_menu_cart); // returns exception
 
