@@ -18,22 +18,24 @@
             <Button x:Name="diy_family_pizza_button" Content="Family" Click="diy_family_pizza_button_Click" Width="50"/>
         </StackPanel>
         <TextBlock Text="Dough" FontSize="15" HorizontalAlignment="Center" Margin="0, 130, 0, 0"/>
+        <TextBlock Text="Total Price:" FontSize="15" HorizontalAlignment="Center" Margin="340, 130, 0, 0"/>
+        <TextBlock x:Name="diy_total_price" Text="" FontSize="15" HorizontalAlignment="Center" Margin="340, 150, 0, 0"/>
         <StackPanel Orientation="Horizontal" VerticalAlignment="Top" Margin="0, 80, 0, 0" HorizontalAlignment="Center">
-            <RadioButton x:Name="diy_Italian_Tipo_00_rad_button" Margin="0, 85, 0, 0"/>
-            <RadioButton x:Name="diy_normie_pizza_dough_button" Margin="100, 85, 0, 0"/>
+            <RadioButton x:Name="diy_Italian_Tipo_00_rad_button" Margin="0, 85, 0, 0" Checked="diy_Italian_Tipo_00_rad_button_Checked"/>
+            <RadioButton x:Name="diy_normie_pizza_dough_button" Margin="100, 85, 0, 0" Checked="diy_normie_pizza_dough_button_Checked"/>
         </StackPanel>
         <TextBlock Text="Italian Tipo 00" Margin="-115, 185, 0, 0" HorizontalAlignment="Center"/>
         <TextBlock Text="Normie pizza dough" Margin="115, 185, 0, 0" HorizontalAlignment="Center"/>
         <TextBlock Text="Sauce" FontSize="15" HorizontalAlignment="Center" Margin="0, 220, 0, 0"/>
         <StackPanel Orientation="Horizontal" VerticalAlignment="Top" Margin="0, 170, 0, 0" HorizontalAlignment="Center">
-            <RadioButton x:Name="diy_tomato_sauce_rad_button" Margin="0, 85, 0, 0"/>
-            <RadioButton x:Name="diy_sweet_sour_sauce_button" Margin="100, 85, 0, 0"/>
+            <RadioButton x:Name="diy_tomato_sauce_rad_button" Margin="0, 85, 0, 0" Checked="diy_tomato_sauce_rad_button_Checked"/>
+            <RadioButton x:Name="diy_sweet_sour_sauce_button" Margin="100, 85, 0, 0" Checked="diy_sweet_sour_sauce_button_Checked"/>
         </StackPanel>
         <TextBlock Text="Tomato sauce" Margin="-115, 275, 0, 0" HorizontalAlignment="Center"/>
         <TextBlock Text="Sweet / Sour" Margin="115, 275, 0, 0" HorizontalAlignment="Center"/>
         <TextBlock Text="Topping" FontSize="15" HorizontalAlignment="Center" Margin="0, 310, 0, 0"/>
         <StackPanel x:Name="diy_topping" Orientation="Horizontal" VerticalAlignment="Top" Margin="0, 350, 0, 0" HorizontalAlignment="Center">
-            <ComboBox HorizontalAlignment="Center" Margin="0, 0, 0, 0" Width="70">
+            <ComboBox x:Name="diy_topping_combobox1" HorizontalAlignment="Center" Margin="0, 0, 0, 0" Width="70" SelectionChanged="diy_topping_combobox1_SelectionChanged">
                 <ComboBoxItem>Ham</ComboBoxItem>
                 <ComboBoxItem>Fries</ComboBoxItem>
                 <ComboBoxItem>Champingon</ComboBoxItem>
@@ -44,7 +46,7 @@
                 <ComboBoxItem>Cocktail sausage</ComboBoxItem>
                 <ComboBoxItem>Extra cheese</ComboBoxItem>
             </ComboBox>
-            <ComboBox HorizontalAlignment="Center" Margin="40, 0, 0, 0" Width="70">
+            <ComboBox x:Name="diy_topping_combobox2" HorizontalAlignment="Center" Margin="40, 0, 0, 0" Width="70" SelectionChanged="diy_topping_combobox2_SelectionChanged">
                 <ComboBoxItem>Ham</ComboBoxItem>
                 <ComboBoxItem>Fries</ComboBoxItem>
                 <ComboBoxItem>Champingon</ComboBoxItem>
@@ -55,7 +57,7 @@
                 <ComboBoxItem>Cocktail sausage</ComboBoxItem>
                 <ComboBoxItem>Extra cheese</ComboBoxItem>
             </ComboBox>
-            <ComboBox HorizontalAlignment="Center" Margin="40, 0, 0, 0" Width="70">
+            <ComboBox x:Name="diy_topping_combobox3" HorizontalAlignment="Center" Margin="40, 0, 0, 0" Width="70" SelectionChanged="diy_topping_combobox3_SelectionChanged">
                 <ComboBoxItem>Ham</ComboBoxItem>
                 <ComboBoxItem>Fries</ComboBoxItem>
                 <ComboBoxItem>Champingon</ComboBoxItem>
@@ -66,7 +68,7 @@
                 <ComboBoxItem>Cocktail sausage</ComboBoxItem>
                 <ComboBoxItem>Extra cheese</ComboBoxItem>
             </ComboBox>
-            <ComboBox HorizontalAlignment="Center" Margin="40, 0, 0, 0" Width="70">
+            <ComboBox x:Name="diy_topping_combobox4" HorizontalAlignment="Center" Margin="40, 0, 0, 0" Width="70" SelectionChanged="diy_topping_combobox4_SelectionChanged">
                 <ComboBoxItem>Ham</ComboBoxItem>
                 <ComboBoxItem>Fries</ComboBoxItem>
                 <ComboBoxItem>Champingon</ComboBoxItem>
@@ -81,7 +83,7 @@
         <TextBlock Text="Cheese" HorizontalAlignment="Center" FontSize="15" Margin="-150, 400, 0, 0"/>
         <TextBlock Text="Spice" HorizontalAlignment="Center" FontSize="15" Margin="150, 400, 0, 0"/>
         <StackPanel x:Name="diy_cheese" Orientation="Horizontal" VerticalAlignment="Top" Margin="-150, 430, 0, 0" HorizontalAlignment="Center">
-            <ComboBox HorizontalAlignment="Center" Margin="0, 0, 0, 0" Width="70">
+            <ComboBox x:Name="diy_cheese_combobox" HorizontalAlignment="Center" Margin="0, 0, 0, 0" Width="70" SelectionChanged="diy_cheese_combobox_SelectionChanged">
                 <ComboBoxItem>Cow cheese</ComboBoxItem>
                 <ComboBoxItem>Goat cheese</ComboBoxItem>
                 <ComboBoxItem>Horse cheese</ComboBoxItem>
@@ -89,7 +91,7 @@
             </ComboBox>
         </StackPanel>
         <StackPanel x:Name="diy_spice" Orientation="Horizontal" VerticalAlignment="Top" Margin="150, 430, 0, 0" HorizontalAlignment="Center">
-            <ComboBox HorizontalAlignment="Center" Margin="0, 0, 0, 0" Width="70">
+            <ComboBox x:Name="diy_spice_combobox" HorizontalAlignment="Center" Margin="0, 0, 0, 0" Width="70" SelectionChanged="diy_spice_combobox_SelectionChanged">
                 <ComboBoxItem>Pepper</ComboBoxItem>
                 <ComboBoxItem>Salt</ComboBoxItem>
                 <ComboBoxItem>Extra Pepperoni</ComboBoxItem>
@@ -98,7 +100,7 @@
                 <ComboBoxItem>Extra extra hot chili</ComboBoxItem>
             </ComboBox>
         </StackPanel>
-        <Button x:Name="diy_next_button" Content="Next" Width="60" Height="20" HorizontalAlignment="Center" Margin="350, 420, 0, 0"/>
+        <Button x:Name="diy_next_button" Content="Next" Width="60" Height="20" HorizontalAlignment="Center" Margin="350, 420, 0, 0" Click="diy_next_button_Click"/>
         <Button x:Name="diy_reset_button" Content="Reset" Width="60" Height="20" HorizontalAlignment="Center" Margin="-350, 420, 0, 0" Click="diy_reset_button_Click"/>
     </Grid>
 </Page>

@@ -13,7 +13,7 @@
         
         <DataGrid Margin="50, 70, 50, 50" ItemsSource="{Binding Path=pizza_orders}">
             <DataGrid.Columns>
-                <DataGridTextColumn Header="Pizza" Binding="{Binding Pizza_Order}"/>
+                <DataGridTextColumn Header="Pizza" Binding="{Binding Pizza_Order, NotifyOnSourceUpdated=True}"/>
             </DataGrid.Columns>
         </DataGrid>
     </Grid>
