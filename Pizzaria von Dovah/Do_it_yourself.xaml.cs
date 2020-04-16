@@ -20,10 +20,10 @@ namespace Pizzaria_von_Dovah
     /// </summary>
     public partial class Do_it_yourself : Page
     {
-        bool diy_medium_size_checku = true;
-        bool diy_family_size_checku = false;
-        int diy_medium_size_price = 1;
-        double diy_family_size_price = 1.5;
+        //bool diy_medium_size_checku = true;
+        //bool diy_family_size_checku = false;
+        //int diy_medium_size_price = 1;
+        //double diy_family_size_price = 1.5;
 
         bool diy_Italian_Tipo_00_checku = false;
         int diy_Italian_Tipo_00_price = 5;
@@ -36,21 +36,23 @@ namespace Pizzaria_von_Dovah
         double total_price;
         enum toppings {Ham, Fries, Champingon, Pepperoni, Chicken, Kebab, Spaghetti, Cocktail_Sausage, Extra_Cheese}
         toppings diy_toppings;
-        int diy_toppings_ham_price = 1;
-        double diy_toppings_fries_price = 1.3;
+        //int diy_toppings_ham_price = 1;
+        //double diy_toppings_fries_price = 1.3;
         int diy_toppings_champingon_price = 1;
-        double diy_toppings_pepperoni_price = 0.5;
-        int diy_toppings_chicken_price = 2;
-        int diy_toppings_kebab_price = 2;
-        int diy_toppings_spaghetti_price = 2;
-        int diy_toppings_cocktail_sausage_price = 2;
-        double diy_toppings_extra_cheese_price = 1.5;
+        //double diy_toppings_pepperoni_price = 0.5;
+        //int diy_toppings_chicken_price = 2;
+        //int diy_toppings_kebab_price = 2;
+        //int diy_toppings_spaghetti_price = 2;
+        //int diy_toppings_cocktail_sausage_price = 2;
+        //double diy_toppings_extra_cheese_price = 1.5;
+        Frame main_menu_frame;
 
         // WARNING: Highly inefficient way of doing this but it was the simplest way of doing it
         // example for a better solution: this.diy_pizza.dough = Italian_Tipo_00;
 
-        public Do_it_yourself()
+        public Do_it_yourself(Frame main_menu_frame)
         {
+            this.main_menu_frame = main_menu_frame;
             var diy_order = new List<string>();
             InitializeComponent();
         }
@@ -186,17 +188,14 @@ namespace Pizzaria_von_Dovah
 
         private void diy_reset_button_Click(object sender, RoutedEventArgs e)
         {
-            Main_Menu mm = new Main_Menu();
-            mm.main_menu_frame.Content = null;
-
-            // not working
+            this.main_menu_frame.Content = new Do_it_yourself(this.main_menu_frame);
         }
 
         // ---------- Next ----------
 
         private void diy_next_button_Click(object sender, RoutedEventArgs e)
         {
-            // add everything to the list?
+            // add everything to the list
         }
     }
 }

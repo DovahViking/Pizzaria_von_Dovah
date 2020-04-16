@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,6 +14,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Runtime.CompilerServices;
 
 namespace Pizzaria_von_Dovah
 {
@@ -27,7 +29,7 @@ namespace Pizzaria_von_Dovah
         {
             //Pizza pizza1 = new Pizza("pizzaaaaaaaa", "qqqq", "32");
             InitializeComponent();
-            DataContext = this.pizza_orders;
+            DataContext = this;
         }
 
         private void menu_medium_pizza_button_Click(object sender, RoutedEventArgs e)
@@ -100,10 +102,35 @@ namespace Pizzaria_von_Dovah
         }
     }
 
-    public class Pizza_Order
+    public class Pizza_Order : INotifyPropertyChanged
     {
-        public string pizza_name;
-        public string pizza_price;
+        private string _pizza_name;
+        public string pizza_name
+        {
+            get { return _pizza_name; }
+            set
+            {
+                if (_pizza_name != value)
+                {
+                    _pizza_name = value;
+                    OnPropertyChanged();
+                }
+            }
+        }
+
+        private string _pizza_price;
+        public string pizza_price
+        {
+            get { return _pizza_price; }
+            set
+            {
+                if (_pizza_price != value)
+                {
+                    _pizza_price = value;
+                    OnPropertyChanged();
+                }
+            }
+        }
 
         public Pizza_Order(string pizza_name, string pizza_price)
         {
@@ -111,15 +138,10 @@ namespace Pizzaria_von_Dovah
             this.pizza_price = pizza_price;
         }
 
-        public string pizz_name
+        public event PropertyChangedEventHandler PropertyChanged;
+        private void OnPropertyChanged([CallerMemberName] string propertyName = null)
         {
-            get { return pizza_name; }
-            set { pizza_name = value; }
-        }
-        public string pizz_price
-        {
-            get { return pizza_price; }
-            set { pizza_price = value; }
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
     }
 
