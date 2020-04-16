@@ -186,7 +186,10 @@ namespace Pizzaria_von_Dovah
 
         private void diy_reset_button_Click(object sender, RoutedEventArgs e)
         {
+            Main_Menu mm = new Main_Menu();
+            mm.main_menu_frame.Content = null;
 
+            // not working
         }
 
         // ---------- Next ----------
