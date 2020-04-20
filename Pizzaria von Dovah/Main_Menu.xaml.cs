@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -20,8 +21,10 @@ namespace Pizzaria_von_Dovah
     /// </summary>
     public partial class Main_Menu : Window
     {
+        public static ObservableCollection<Pizza_Order> pizza_orders = new ObservableCollection<Pizza_Order>();
+
         bool cart = false;
-        Cart shopping_cart = new Cart();
+        Cart shopping_cart = new Cart(pizza_orders);
 
         public Main_Menu()
         {
@@ -36,7 +39,7 @@ namespace Pizzaria_von_Dovah
 
         private void main_menu_menu_Click(object sender, RoutedEventArgs e)
         {
-            main_menu_frame.Content = new Menu();
+            main_menu_frame.Content = new Menu(pizza_orders);
         }
 
         private void main_menu_do_it_yourself_Click(object sender, RoutedEventArgs e)

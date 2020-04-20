@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -20,9 +21,14 @@ namespace Pizzaria_von_Dovah
     /// </summary>
     public partial class Cart : Page
     {
-        public Cart()
+        static ObservableCollection<Pizza_Order> pizza_orders; // Shows Counter = 1 if a pizza is added to the Cart
+                                                               // No idea if this setup is right though
+
+        public Cart(ObservableCollection<Pizza_Order> pizza_orders)
         {
+            Cart.pizza_orders = pizza_orders;
             InitializeComponent();
+            DataContext = Cart.pizza_orders; // No idea what DataContext should be
         }
     }
 }

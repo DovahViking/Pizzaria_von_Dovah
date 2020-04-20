@@ -13,8 +13,8 @@
         
         <DataGrid Margin="50, 70, 50, 50" ItemsSource="{Binding Source=pizza_orders}">
             <DataGrid.Columns>
-                <DataGridTextColumn Header="Pizza" Binding="{Binding Path=pizza_name, Mode=TwoWay, NotifyOnSourceUpdated=True, UpdateSourceTrigger=PropertyChanged}"/>
-                <DataGridTextColumn Header="Price" Binding="{Binding pizza_price, UpdateSourceTrigger=PropertyChanged}"/>
+                <DataGridTextColumn Header="Pizza" Binding="{Binding pizza_name, Mode=TwoWay, NotifyOnSourceUpdated=True, UpdateSourceTrigger=PropertyChanged}"/>
+                <DataGridTextColumn Header="Price" Binding="{Binding pizza_price, Mode=TwoWay, NotifyOnSourceUpdated=True, UpdateSourceTrigger=PropertyChanged}"/>
             </DataGrid.Columns>
         </DataGrid>
     </Grid>

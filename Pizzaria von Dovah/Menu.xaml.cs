@@ -23,13 +23,13 @@ namespace Pizzaria_von_Dovah
     /// </summary>
     public partial class Menu : Page
     {
-        public ObservableCollection<Pizza_Order> pizza_orders = new ObservableCollection<Pizza_Order>();
+        ObservableCollection<Pizza_Order> pizza_orders;
 
-        public Menu()
+        public Menu(ObservableCollection<Pizza_Order> pizza_orders)
         {
             //Pizza pizza1 = new Pizza("pizzaaaaaaaa", "qqqq", "32");
+            this.pizza_orders = pizza_orders;
             InitializeComponent();
-            DataContext = this;
         }
 
         private void menu_medium_pizza_button_Click(object sender, RoutedEventArgs e)
@@ -62,15 +62,15 @@ namespace Pizzaria_von_Dovah
         {
             if (sender.Equals(pizza_order1)) // tried with switch/case but got type exception
             {
-                pizza_orders.Add(new Pizza_Order(pizza_name1.Text, pizza_price1.Text));
+                this.pizza_orders.Add(new Pizza_Order(pizza_name1.Text, pizza_price1.Text));
             }
             if (sender.Equals(pizza_order2))
             {
-                pizza_orders.Add(new Pizza_Order(pizza_name2.Text, pizza_price2.Text));
+                this.pizza_orders.Add(new Pizza_Order(pizza_name2.Text, pizza_price2.Text));
             }
             if (sender.Equals(pizza_order3))
             {
-                pizza_orders.Add(new Pizza_Order(pizza_name3.Text, pizza_price3.Text));
+                this.pizza_orders.Add(new Pizza_Order(pizza_name3.Text, pizza_price3.Text));
             }
         }
 
@@ -102,52 +102,9 @@ namespace Pizzaria_von_Dovah
         }
     }
 
-    public class Pizza_Order : INotifyPropertyChanged
-    {
-        private string _pizza_name;
-        public string pizza_name
-        {
-            get { return _pizza_name; }
-            set
-            {
-                if (_pizza_name != value)
-                {
-                    _pizza_name = value;
-                    OnPropertyChanged();
-                }
-            }
-        }
-
-        private string _pizza_price;
-        public string pizza_price
-        {
-            get { return _pizza_price; }
-            set
-            {
-                if (_pizza_price != value)
-                {
-                    _pizza_price = value;
-                    OnPropertyChanged();
-                }
-            }
-        }
-
-        public Pizza_Order(string pizza_name, string pizza_price)
-        {
-            this.pizza_name = pizza_name;
-            this.pizza_price = pizza_price;
-        }
-
-        public event PropertyChangedEventHandler PropertyChanged;
-        private void OnPropertyChanged([CallerMemberName] string propertyName = null)
-        {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
-        }
-    }
-
     //public class Pizza
     //{
-    //    Main_Menu MM; // is null......
+    //    Main_Menu MM = new Main_Menu();
 
     //    string name;
     //    string ingredients;
