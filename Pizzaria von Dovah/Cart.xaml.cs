@@ -21,14 +21,13 @@ namespace Pizzaria_von_Dovah
     /// </summary>
     public partial class Cart : Page
     {
-        static ObservableCollection<Pizza_Order> pizza_orders; // Shows Counter = 1 if a pizza is added to the Cart
-                                                               // No idea if this setup is right though
+        static ObservableCollection<Pizza_Order> pizza_orders;
 
         public Cart(ObservableCollection<Pizza_Order> pizza_orders)
         {
-            Cart.pizza_orders = pizza_orders;
+            Cart.pizza_orders = pizza_orders; // "this.pizza_orders = pizza_orders;" returns instance reference error, therefore; Cart.pizza_orders = pizza_orders;
             InitializeComponent();
-            DataContext = Cart.pizza_orders; // No idea what DataContext should be
+            PizzaGrid.ItemsSource = pizza_orders; // Avoid using DataContext and instead apply the ItemsSource to the list
         }
     }
 }

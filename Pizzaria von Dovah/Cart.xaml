@@ -11,10 +11,10 @@
     <Grid>
         <TextBlock Text="Cart" FontSize="30" HorizontalAlignment="Center"/>
         
-        <DataGrid Margin="50, 70, 50, 50" ItemsSource="{Binding Source=pizza_orders}">
+        <DataGrid x:Name="PizzaGrid" Margin="50, 70, 50, 50" ItemsSource="{Binding}" AutoGenerateColumns="False">
             <DataGrid.Columns>
-                <DataGridTextColumn Header="Pizza" Binding="{Binding pizza_name, Mode=TwoWay, NotifyOnSourceUpdated=True, UpdateSourceTrigger=PropertyChanged}"/>
-                <DataGridTextColumn Header="Price" Binding="{Binding pizza_price, Mode=TwoWay, NotifyOnSourceUpdated=True, UpdateSourceTrigger=PropertyChanged}"/>
+                <DataGridTextColumn Header="Pizza" Binding="{Binding pizza_name}"/>
+                <DataGridTextColumn Header="Price" Binding="{Binding pizza_price}"/>
             </DataGrid.Columns>
         </DataGrid>
     </Grid>
