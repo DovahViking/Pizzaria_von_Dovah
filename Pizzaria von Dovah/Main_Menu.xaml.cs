@@ -21,7 +21,12 @@ namespace Pizzaria_von_Dovah
     /// </summary>
     public partial class Main_Menu : Window
     {
-        public static ObservableCollection<Pizza_Order> pizza_orders = new ObservableCollection<Pizza_Order>();
+        private static ObservableCollection<Pizza_Order> pizza_orders = new ObservableCollection<Pizza_Order>();
+        public static ObservableCollection<Pizza_Order> Pizza_orders
+        {
+            get => pizza_orders;
+            set => pizza_orders = value;
+        }
 
         bool cart = false;
         Cart shopping_cart = new Cart(pizza_orders);
