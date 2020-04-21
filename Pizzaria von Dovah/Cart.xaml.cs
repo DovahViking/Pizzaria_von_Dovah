@@ -21,14 +21,15 @@ namespace Pizzaria_von_Dovah
     /// </summary>
     public partial class Cart : Page
     {
-        static ObservableCollection<Pizza_Order> pizza_orders; // Shows Counter = 1 if a pizza is added to the Cart
-                                                               // No idea if this setup is right though
+        public ObservableCollection<Pizza_Order> pizza_orders { get; set; } // XAML can only read from properties, but not fields, hence the 'get' and 'set'
 
         public Cart(ObservableCollection<Pizza_Order> pizza_orders)
         {
-            Cart.pizza_orders = pizza_orders;
+            this.pizza_orders = pizza_orders;
             InitializeComponent();
-            DataContext = Cart.pizza_orders; // No idea what DataContext should be
+            this.DataContext = this; // Bindings will read from this value, so by setting it to "this" it will have the same members as this class
+                                     // meaning one of the members will be your "pizza_orders" from the above.
+                                     // There's probably a nicer way to achieve this
         }
     }
 }
