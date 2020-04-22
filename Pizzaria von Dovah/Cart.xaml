@@ -13,8 +13,9 @@
         
         <DataGrid x:Name="PizzaGrid" Margin="50, 70, 50, 50" ItemsSource="{Binding}" AutoGenerateColumns="False">
             <DataGrid.Columns>
-                <DataGridTextColumn Header="Pizza" Binding="{Binding pizza_name}"/>
-                <DataGridTextColumn Header="Price" Binding="{Binding pizza_price}"/>
+                <DataGridTextColumn Header="Order" Binding="{Binding order_name}"/>
+                <DataGridTextColumn Header="Price" Binding="{Binding order_price}"/>
+                <DataGridTextColumn Header="Size" Binding="{Binding order_size}"/>
             </DataGrid.Columns>
         </DataGrid>
     </Grid>

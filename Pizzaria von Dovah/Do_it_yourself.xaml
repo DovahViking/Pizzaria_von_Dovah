@@ -19,7 +19,7 @@
         </StackPanel>
         <TextBlock Text="Dough" FontSize="15" HorizontalAlignment="Center" Margin="0, 130, 0, 0"/>
         <TextBlock Text="Total Price:" FontSize="15" HorizontalAlignment="Center" Margin="340, 130, 0, 0"/>
-        <TextBlock x:Name="diy_total_price" Text="" FontSize="15" HorizontalAlignment="Center" Margin="340, 150, 0, 0"/>
+        <TextBlock x:Name="diy_total_price" Text="15.00" FontSize="15" HorizontalAlignment="Center" Margin="340, 150, 0, 0"/>
         <StackPanel Orientation="Horizontal" VerticalAlignment="Top" Margin="0, 80, 0, 0" HorizontalAlignment="Center">
             <RadioButton x:Name="diy_Italian_Tipo_00_rad_button" Margin="0, 85, 0, 0" Checked="diy_Italian_Tipo_00_rad_button_Checked"/>
             <RadioButton x:Name="diy_normie_pizza_dough_button" Margin="100, 85, 0, 0" Checked="diy_normie_pizza_dough_button_Checked"/>

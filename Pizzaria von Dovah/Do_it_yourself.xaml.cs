@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -20,10 +21,15 @@ namespace Pizzaria_von_Dovah
     /// </summary>
     public partial class Do_it_yourself : Page
     {
-        //bool diy_medium_size_checku = true;
-        //bool diy_family_size_checku = false;
-        //int diy_medium_size_price = 1;
-        //double diy_family_size_price = 1.5;
+        ObservableCollection<Pizza_Order> pizza_orders;
+
+        bool medium_size = true;
+        bool medium_size_pressed = true;
+        bool family_size_pressed = false;
+        bool family_size = false;
+        double medium_price = 15.00;
+        double family_price = 20.00;
+        string pizza_size = "Medium";
 
         bool diy_Italian_Tipo_00_checku = false;
         int diy_Italian_Tipo_00_price = 5;
@@ -33,7 +39,8 @@ namespace Pizzaria_von_Dovah
         int diy_sweet_sour_sauce_price = 3;
         bool diy_normie_pizza_dough_checku = false;
         int diy_normie_pizza_dough_price = 2;
-        double total_price;
+
+        double total_price = 15.00;
         enum toppings {Ham, Fries, Champingon, Pepperoni, Chicken, Kebab, Spaghetti, Cocktail_Sausage, Extra_Cheese}
         toppings diy_toppings;
         //int diy_toppings_ham_price = 1;
@@ -50,9 +57,10 @@ namespace Pizzaria_von_Dovah
         // WARNING: Highly inefficient way of doing this but it was the simplest way of doing it
         // example for a better solution: this.diy_pizza.dough = Italian_Tipo_00;
 
-        public Do_it_yourself(Frame main_menu_frame)
+        public Do_it_yourself(Frame main_menu_frame, ObservableCollection<Pizza_Order> pizza_orders)
         {
             this.main_menu_frame = main_menu_frame;
+            this.pizza_orders = pizza_orders;
             var diy_order = new List<string>();
             InitializeComponent();
         }
@@ -66,12 +74,45 @@ namespace Pizzaria_von_Dovah
 
         private void diy_medium_pizza_button_Click(object sender, RoutedEventArgs e)
         {
+            if (medium_size)
+            {
 
+            }
+            else
+            {
+                medium_size_pressed = true;
+                medium_size = true;
+                total_price += medium_price;
+                if (family_size_pressed)
+                {
+                    total_price -= family_price;
+                }
+                diy_total_price.Text = Convert.ToString(total_price);
+                pizza_size = "Medium";
+
+            }
+            family_size = false;
         }
 
         private void diy_family_pizza_button_Click(object sender, RoutedEventArgs e)
         {
-
+            if (family_size)
+            {
+                
+            }
+            else
+            {
+                family_size_pressed = true;
+                family_size = true;
+                total_price += family_price;
+                if (medium_size_pressed)
+                {
+                    total_price -= medium_price;
+                }
+                diy_total_price.Text = Convert.ToString(total_price);
+                pizza_size = "Family";
+            }
+            medium_size = false;
         }
 
         // ---------- Dough ----------
@@ -188,14 +229,14 @@ namespace Pizzaria_von_Dovah
 
         private void diy_reset_button_Click(object sender, RoutedEventArgs e)
         {
-            this.main_menu_frame.Content = new Do_it_yourself(this.main_menu_frame);
+            this.main_menu_frame.Content = new Do_it_yourself(this.main_menu_frame, pizza_orders);
         }
 
         // ---------- Next ----------
 
         private void diy_next_button_Click(object sender, RoutedEventArgs e)
         {
-            // add everything to the list
+            pizza_orders.Add(new Pizza_Order("Do it yourself pizza", Convert.ToString(total_price), pizza_size)); // Needs to add the constructor overload variables next :3
         }
     }
 }

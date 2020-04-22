@@ -12,9 +12,9 @@
     <Grid>
         <TextBlock x:Name="main_menu_header" Text="Pizzaria von Dovah" FontSize="45" FontWeight="Heavy" HorizontalAlignment="Center" Margin="0, 10, 0, 0"/>
         <StackPanel Orientation="Horizontal" VerticalAlignment="Top" Height="30" Margin="0, 100, 0, 0">
-            <Button x:Name="main_menu_menu" Content="Menu" MinWidth="100" Margin="37, 0, 0, 0" FontSize="20" ToolTipService.InitialShowDelay="1000" ToolTipService.ShowDuration="8000" ToolTip="Go to the pizza menu&#x0a;to order a pizza!" Click="main_menu_menu_Click"/>
-            <Button x:Name="main_menu_do_it_yourself" Content="Do it yourself" MinWidth="140" Margin="37, 0, 0, 0" FontSize="20" ToolTipService.InitialShowDelay="1000" ToolTipService.ShowDuration="8000" ToolTip="Go to the pizza menu&#x0a;to order a pizza!" Click="main_menu_do_it_yourself_Click"/>
-            <Button x:Name="main_menu_cart" Content="Cart" MinWidth="100" Margin="37, 0, 0, 0" FontSize="20" ToolTipService.InitialShowDelay="1000" ToolTipService.ShowDuration="8000" ToolTip="Go to the pizza menu&#x0a;to order a pizza!" Click="main_menu_cart_Click"/>
+            <Button x:Name="main_menu_menu" Content="Menu" MinWidth="100" Margin="37, 0, 0, 0" FontSize="20" ToolTipService.InitialShowDelay="1000" ToolTipService.ShowDuration="8000" ToolTip="Go to the Menu&#x0a;to order food and drinks!" Click="main_menu_menu_Click"/>
+            <Button x:Name="main_menu_do_it_yourself" Content="Do it yourself" MinWidth="140" Margin="37, 0, 0, 0" FontSize="20" ToolTipService.InitialShowDelay="1000" ToolTipService.ShowDuration="8000" ToolTip="Go to Do it yourself&#x0a;to make your own pizza!" Click="main_menu_do_it_yourself_Click"/>
+            <Button x:Name="main_menu_cart" Content="Cart" MinWidth="100" Margin="37, 0, 0, 0" FontSize="20" ToolTipService.InitialShowDelay="1000" ToolTipService.ShowDuration="8000" ToolTip="Go to the Cart&#x0a;to look at your current orders!" Click="main_menu_cart_Click"/>
         </StackPanel>
         <Frame x:Name="main_menu_frame" Margin="0, 170, 0, 0" NavigationUIVisibility="Hidden" Content="{Binding Path=stacc}"/>
     </Grid>

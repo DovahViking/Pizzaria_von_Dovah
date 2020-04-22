@@ -22,11 +22,6 @@ namespace Pizzaria_von_Dovah
     public partial class Main_Menu : Window
     {
         private static ObservableCollection<Pizza_Order> pizza_orders = new ObservableCollection<Pizza_Order>();
-        public static ObservableCollection<Pizza_Order> Pizza_orders
-        {
-            get => pizza_orders;
-            set => pizza_orders = value;
-        }
 
         bool cart = false;
         Cart shopping_cart = new Cart(pizza_orders);
@@ -49,7 +44,7 @@ namespace Pizzaria_von_Dovah
 
         private void main_menu_do_it_yourself_Click(object sender, RoutedEventArgs e)
         {
-            main_menu_frame.Content = new Do_it_yourself(main_menu_frame);
+            main_menu_frame.Content = new Do_it_yourself(main_menu_frame, pizza_orders);
         }
 
         private void main_menu_cart_Click(object sender, RoutedEventArgs e)
