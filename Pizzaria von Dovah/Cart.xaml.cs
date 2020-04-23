@@ -22,12 +22,24 @@ namespace Pizzaria_von_Dovah
     public partial class Cart : Page
     {
         static ObservableCollection<Pizza_Order> pizza_orders;
+        double price_result;
 
         public Cart(ObservableCollection<Pizza_Order> pizza_orders)
         {
             Cart.pizza_orders = pizza_orders; // "this.pizza_orders = pizza_orders;" returns instance reference error, therefore; Cart.pizza_orders = pizza_orders;
             InitializeComponent();
             PizzaGrid.ItemsSource = pizza_orders; // Avoid using DataContext and instead apply the ItemsSource to the list
+            cart_total.Text = total_price();
+            //PizzaGrid_DIY.ItemsSource = pizza_orders; // Dunno if I can make the ItemsSource for the DIY list independant, since they use the same source
+        }
+
+        public string total_price()
+        {
+            foreach (Pizza_Order pizza in pizza_orders)
+            {
+                price_result += Convert.ToDouble(pizza.order_price);
+            }
+            return Convert.ToString(price_result);
         }
     }
 }

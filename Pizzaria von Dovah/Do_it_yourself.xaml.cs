@@ -40,6 +40,11 @@ namespace Pizzaria_von_Dovah
         bool diy_normie_pizza_dough_checku = false;
         int diy_normie_pizza_dough_price = 2;
 
+        string pizza_dough;
+        string pizza_sauce;
+        string pizza_cheese;
+        string pizza_spice;
+
         double total_price = 15.00;
         enum toppings {Ham, Fries, Champingon, Pepperoni, Chicken, Kebab, Spaghetti, Cocktail_Sausage, Extra_Cheese}
         toppings diy_toppings;
@@ -129,6 +134,7 @@ namespace Pizzaria_von_Dovah
             {
                 diy_Italian_Tipo_00_checku = true;
                 total_price += diy_Italian_Tipo_00_price;
+                pizza_dough = "Italian Tipo 00";
                 diy_total_price.Text = Convert.ToString(total_price);
             }
         }
@@ -145,6 +151,7 @@ namespace Pizzaria_von_Dovah
             {
                 diy_normie_pizza_dough_checku = true;
                 total_price += diy_normie_pizza_dough_price;
+                pizza_dough = "Normie dough";
                 diy_total_price.Text = Convert.ToString(total_price);
             }
         }
@@ -163,6 +170,7 @@ namespace Pizzaria_von_Dovah
             {
                 diy_tomato_sauce_checku = true;
                 total_price += diy_tomato_sauce_price;
+                pizza_sauce = "Tomato sauce";
                 diy_total_price.Text = Convert.ToString(total_price);
             }
         }
@@ -179,6 +187,7 @@ namespace Pizzaria_von_Dovah
             {
                 diy_sweet_sour_sauce_checku = true;
                 total_price += diy_sweet_sour_sauce_price;
+                pizza_sauce = "Sweet / sour sauce";
                 diy_total_price.Text = Convert.ToString(total_price);
             }
         }
@@ -215,14 +224,64 @@ namespace Pizzaria_von_Dovah
 
         private void diy_cheese_combobox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
+            switch (diy_cheese_combobox.SelectedIndex)
+            {
+                case 0:
+                    pizza_cheese = "Cow cheese";
+                    break;
 
+                case 1:
+                    pizza_cheese = "Goat cheese";
+                    break;
+
+                case 2:
+                    pizza_cheese = "Horse cheese";
+                    break;
+
+                case 3:
+                    pizza_cheese = "Pig cheese";
+                    break;
+
+                default:
+                    pizza_cheese = "";
+                    break;
+            }
         }
 
         // ---------- Spice ----------
 
         private void diy_spice_combobox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
+            switch (diy_spice_combobox.SelectedIndex)
+            {
+                case 0:
+                    pizza_spice = "Pepper";
+                    break;
 
+                case 1:
+                    pizza_spice = "Salt";
+                    break;
+
+                case 2:
+                    pizza_spice = "Extra Pepperoni";
+                    break;
+
+                case 3:
+                    pizza_spice = "Chili";
+                    break;
+
+                case 4:
+                    pizza_spice = "Extra hot chili";
+                    break;
+
+                case 5:
+                    pizza_spice = "Extra extra hot chili";
+                    break;
+
+                default:
+                    pizza_spice = "";
+                    break;
+            }
         }
 
         // ---------- Reset ----------
@@ -236,7 +295,7 @@ namespace Pizzaria_von_Dovah
 
         private void diy_next_button_Click(object sender, RoutedEventArgs e)
         {
-            pizza_orders.Add(new Pizza_Order("Do it yourself pizza", Convert.ToString(total_price), pizza_size)); // Needs to add the constructor overload variables next :3
+            pizza_orders.Add(new Pizza_Order("Pizza", Convert.ToString(total_price), pizza_size, pizza_dough, pizza_sauce, "toppings", pizza_cheese, pizza_spice)); // Needs to add the constructor overload variables next :3
         }
     }
 }

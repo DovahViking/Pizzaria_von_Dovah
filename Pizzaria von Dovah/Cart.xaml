@@ -10,13 +10,28 @@
 
     <Grid>
         <TextBlock Text="Cart" FontSize="30" HorizontalAlignment="Center"/>
-        
-        <DataGrid x:Name="PizzaGrid" Margin="50, 70, 50, 50" ItemsSource="{Binding}" AutoGenerateColumns="False">
+        <!--<TextBlock Text="Menu" FontSize="20" Margin="50, 40, 0, 0"/>-->
+        <!--<DataGrid x:Name="PizzaGrid" Margin="50, 70, 50, 220" ItemsSource="{Binding}" AutoGenerateColumns="False">
             <DataGrid.Columns>
-                <DataGridTextColumn Header="Order" Binding="{Binding order_name}"/>
-                <DataGridTextColumn Header="Price" Binding="{Binding order_price}"/>
-                <DataGridTextColumn Header="Size" Binding="{Binding order_size}"/>
+                <DataGridTextColumn Header="Order" Binding="{Binding order_name}" Width="*"/>
+                <DataGridTextColumn Header="Price" Binding="{Binding order_price}" Width="*"/>
+                <DataGridTextColumn Header="Size" Binding="{Binding order_size}" Width="*"/>
+            </DataGrid.Columns>
+        </DataGrid>-->
+        <!--<TextBlock Text="Do it yourself" FontSize="20" Margin="50, 305, 0, 0"/>-->
+        <DataGrid x:Name="PizzaGrid" Margin="30, 60, 30, 100" ItemsSource="{Binding}" AutoGenerateColumns="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Order" Binding="{Binding order_name}" Width="*"/>
+                <DataGridTextColumn x:Name="prices" Header="Price" Binding="{Binding order_price}" Width="*"/>
+                <DataGridTextColumn Header="Size" Binding="{Binding order_size}" Width="*"/>
+                <DataGridTextColumn Header="Dough" Binding="{Binding order_dough}" Width="*"/>
+                <DataGridTextColumn Header="Sauce" Binding="{Binding order_sauce}" Width="*"/>
+                <DataGridTextColumn Header="Toppings" Binding="{Binding order_toppings}" Width="*"/>
+                <DataGridTextColumn Header="Cheese" Binding="{Binding order_cheese}" Width="*"/>
+                <DataGridTextColumn Header="Spice" Binding="{Binding order_spice}" Width="*"/>
             </DataGrid.Columns>
         </DataGrid>
+        <TextBlock Text="Total:" FontSize="20" HorizontalAlignment="Center" Margin="0, 385, 0, 0"/>
+        <TextBlock x:Name="cart_total" Text="" FontSize="20" HorizontalAlignment="Center" Margin="0, 410, 0, 0" Foreground="DarkRed"/>
     </Grid>
 </Page>
